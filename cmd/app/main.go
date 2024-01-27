@@ -55,7 +55,7 @@ func main() {
 			<p>Thanks for opening this email</p>
 		</div>`, u.String())
 
-		e := email.NewEmail("", h, "Test Email", "japb1998@gmail.com", nil, []string{"japb1998@gmail.com"}, nil)
+		e := email.NewEmail("", h, "Test Email", "<test-email>", nil, []string{"japb1998@gmail.com"}, nil)
 
 		if err := emailSvc.Send(c.Request.Context(), e); err != nil {
 			logger.Error("failed to send email", slog.String("error", err.Error()))
